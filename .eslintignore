@@ -1,6 +1,7 @@
 # next.js
 .next/*
 dist/*
+out/*
 
 # next-pwa
 **/public/workbox-*.js
