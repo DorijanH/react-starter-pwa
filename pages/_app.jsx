@@ -32,7 +32,7 @@ function App(props) {
     <>
       <Head>
         <title>
-          {`${Component.title || 'React starter'} ${!isProduction ? ' - development' : ''}`}
+          {`${Component.title || 'React PWA starter'} ${!isProduction ? ' - development' : ''}`}
         </title>
       </Head>
       <StylesProvider injectFirst>

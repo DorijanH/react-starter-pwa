@@ -12,6 +12,10 @@ import styles from './IndexView.module.scss';
 function IndexView() {
   return (
     <div className={styles.container}>
+      <div className={styles.logoSection}>
+        <span>Try switching to the offline mode and hard refreshing, page caches.</span>
+        <img src="/assets/images/ewLogo.png" className={styles.logo} alt="Enterwell logo" />
+      </div>
       <span>
         Not much to see here. If you are intereseted in Pokemons, visit
       </span>
