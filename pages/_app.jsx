@@ -1,8 +1,7 @@
 // Components import
 import Head from 'next/head';
-import { StylesProvider } from '@mui/styles';
 import { CssBaseline } from '@mui/material';
-import { ThemeProvider } from '@mui/material/styles';
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import UserInformation from '../components/UserInformation/UserInformation';
 
 // Configs import
@@ -35,7 +34,7 @@ function App(props) {
           {`${Component.title || 'React PWA starter'} ${!isProduction ? ' - development' : ''}`}
         </title>
       </Head>
-      <StylesProvider injectFirst>
+      <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {Component.showUser && (
@@ -43,7 +42,7 @@ function App(props) {
           )}
           <Component {...pageProps} />
         </ThemeProvider>
-      </StylesProvider>
+      </StyledEngineProvider>
     </>
   );
 }
