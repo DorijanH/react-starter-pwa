@@ -1,8 +1,12 @@
+// General import
 import React from 'react';
 
 // Components import
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@mui/styles';
+
+// Application description
+const APP_DESCRIPTION = 'This is a PWA built by using Next.js + next-pwa';
 
 /**
  * Custom document component. It is used to augment application's
@@ -51,7 +55,15 @@ class CustomDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="description" content={APP_DESCRIPTION} />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+          <meta name="format-detection" content="telephone=no" />
+          <meta name="mobile-web-app-capable" content="yes" />
+
+          <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />

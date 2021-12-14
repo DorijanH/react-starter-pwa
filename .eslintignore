@@ -1,11 +1,20 @@
+# next.js
 .next/*
-out/*
 dist/*
-node_modules/*
 
+# next-pwa
+**/public/workbox-*.js
+**/public/sw.js
+**/public/worker-*.js
+**/public/fallback-*.js
+
+# dependencies
+node_modules/*
 package.json
-README.md
 yarn.lock
+
+# other
+README.md
 .babelrc
 .eslintrc
 .gitignore
