@@ -1,0 +1,11 @@
+.next/*
+out/*
+dist/*
+node_modules/*
+
+package.json
+README.md
+yarn.lock
+.babelrc
+.eslintrc
+.gitignore
