@@ -1,5 +1,9 @@
 // Components import
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Logo import
+import ewLogo from '../../public/assets/images/ewLogo.png';
 
 // Styles import
 import styles from './IndexView.module.scss';
@@ -14,7 +18,13 @@ function IndexView() {
     <div className={styles.container}>
       <div className={styles.logoSection}>
         <span>Try switching to the offline mode and hard refreshing, page caches.</span>
-        <img src="/assets/images/ewLogo.png" className={styles.logo} alt="Enterwell logo" />
+        <Image
+          loader={() => '/assets/images/ewLogo.png'}
+          src={ewLogo}
+          alt="Enterwell logo"
+          height={100}
+          width={300}
+        />
       </div>
       <span>
         Not much to see here. If you are intereseted in Pokemons, visit

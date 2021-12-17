@@ -6,6 +6,8 @@ import OfflineView from '../views/OfflineView/OfflineView';
  *
  * @returns page's elements
  */
-const Offline = () => <OfflineView />;
+function Offline() {
+  return <OfflineView />;
+}
 
 export default Offline;
