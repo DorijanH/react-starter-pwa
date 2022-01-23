@@ -20,6 +20,9 @@
 **/public/worker-*
 **/public/fallback-*
 
+# storybook
+/storybook-static
+
 # production
 /build
 
