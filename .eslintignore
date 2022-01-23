@@ -9,6 +9,9 @@ out/*
 **/public/worker-*.js
 **/public/fallback-*.js
 
+# storybook
+storybook-static/*
+
 # dependencies
 node_modules/*
 package.json
