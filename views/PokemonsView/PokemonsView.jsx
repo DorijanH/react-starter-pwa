@@ -2,9 +2,10 @@
 import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 
-// Components import
+// Component imports
 import Link from 'next/link';
 import Image from 'next/image';
+import Pagination from '../../components/Pagination/Pagination';
 
 // View models import
 import PokemonsViewModel from '../../view-models/PokemonsViewModel';
@@ -26,7 +27,9 @@ function PokemonsView(props) {
   const {
     pokemons,
     loadPokemons,
-    pageNumber
+    pageNumber,
+    pageSize,
+    totalPokemons
   } = viewModel;
 
   useEffect(() => {
@@ -34,6 +37,10 @@ function PokemonsView(props) {
       loadPokemons();
     }
   }, []);
+
+  const handlePageChange = (_, newPage) => {
+    loadPokemons(newPage - 1);
+  };
 
   return (
     <div className={styles.container}>
@@ -61,21 +68,13 @@ function PokemonsView(props) {
           </Link>
         ))}
       </div>
-      <div className={styles.pagination}>
-        <div
-          className={styles.arrow}
-          onClick={() => loadPokemons(pageNumber - 1)}
-        >
-          &lt;
-        </div>
-        <span>{pageNumber + 1}</span>
-        <div
-          className={styles.arrow}
-          onClick={() => loadPokemons(pageNumber + 1)}
-        >
-          &gt;
-        </div>
-      </div>
+      <Pagination
+        color="primary"
+        count={Math.max(1, Math.ceil(totalPokemons / pageSize))}
+        onChange={handlePageChange}
+        page={pageNumber + 1}
+        siblingCount={2}
+      />
     </div>
   );
 }
