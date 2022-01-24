@@ -29,5 +29,5 @@ jobs:
     - name: Yarn lint
       run: yarn lint
       
-    - name: Yarn test
-      run: yarn test
+    - name: Run E2E tests
+      run: yarn test:ci
