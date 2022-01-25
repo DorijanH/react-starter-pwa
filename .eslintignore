@@ -4,10 +4,10 @@ dist/*
 out/*
 
 # next-pwa
-**/public/workbox-*.js
-**/public/sw.js
-**/public/worker-*.js
-**/public/fallback-*.js
+**/public/workbox-*
+**/public/sw.*
+**/public/worker-*
+**/public/fallback-*
 
 # storybook
 storybook-static/*
