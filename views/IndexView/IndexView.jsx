@@ -22,8 +22,8 @@ function IndexView() {
           loader={() => '/assets/images/ewLogo.png'}
           src={ewLogo}
           alt="Enterwell logo"
+          width={338}
           height={100}
-          width={300}
         />
       </div>
       <span>
