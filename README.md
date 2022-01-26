@@ -1,10 +1,82 @@
-# React PWA starter
+<h1 align="center">
+    React PWA starter
+    <div>
+        <a href="https://reactjs.org/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="30" />
+        </a>
+        <a href="https://www.javascript.com/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="30" />
+        </a>
+        <a href="https://nextjs.org/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);" alt="nextjs" width="30" />
+        </a>
+        <a href="https://mobx.js.org/README.html" target="blank">
+            <img src="https://mobx.js.org/assets/mobx.png" alt="mobx" width="30" />
+        </a>
+        <a href="https://mui.com/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="mui" width="30" />
+        </a>
+        <a href="https://storybook.js.org/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" alt="storybook" width="30" />
+        </a>
+        <a href="https://www.cypress.io/" target="blank">
+            <img src="https://www.cypress.io/icons/icon-48x48.png" alt="cypress" width="30" />
+        </a>
+        <a href="https://yarnpkg.com/" target="blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" alt="yarn" width="30" />
+        </a>
+        +
+        <a href="https://web.dev/progressive-web-apps/" target="blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/1920px-Progressive_Web_Apps_Logo.svg.png" alt="pwa" height="29">
+        </a>
+    </div>
+</h1>
 
-This project is the combination of `Enterwell React starter` with the [next-pwa](https://www.npmjs.com/package/next-pwa#configuration) plugin installed.
+<div align="center">
+
+![](https://img.shields.io/badge/%3C%2F%3E-JavaScript-informational)
+[![Build](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml/badge.svg?branch=main)](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml) 
+![GitHub repo size](https://img.shields.io/github/repo-size/dorijanh/react-starter-pwa?label=GitHub%20repo%20size&logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/dorijanh/react-starter-pwa?label=Last%20commit)
+[![GitHub issues](https://img.shields.io/github/issues/dorijanh/react-starter-pwa?color=0088ff)](https://github.com/DorijanH/react-starter-pwa/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/dorijanh/react-starter-pwa?color=0088ff)](https://github.com/DorijanH/react-starter-pwa/pulls)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/DorijanH/react-starter-pwa.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DorijanH/react-starter-pwa/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/DorijanH/react-starter-pwa.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DorijanH/react-starter-pwa/alerts/)
+
+
+This project is the combination of [Enterwell React starter](https://github.com/Enterwell/react-starter) with the [next-pwa](https://www.npmjs.com/package/next-pwa#configuration) plugin.
 
 It serves as a starter to get the [Next.js](https://nextjs.org/) based PWA quickly running, while leveraging the nice-to-have architecture and structure behind the scenes.
 
 For all the information about structure, architecture, naming and reasoning behind using the React starter visit the Enterwell React starter [GitHub repository](https://github.com/Enterwell/react-starter).
+
+</div>
+
+## Getting Started
+
+Clone the application and move to the appropriate directory
+```
+git clone https://github.com/DorijanH/react-starter-pwa.git <your-project-name>
+cd <your-project-name>
+```
+
+Install project dependencies
+```
+yarn install
+```
+
+Launch the application in development mode
+```
+yarn dev
+```
+
+Build and start the production version
+```
+yarn build
+yarn start
+```
+
+Whether running in development or production mode, application is available at `http://localhost:3000`
 
 ## Custom service worker
 
@@ -19,13 +91,4 @@ For more information see the [next-pwa - custom worker example](https://github.c
 When building the application in development mode using `yarn dev`, cache and precache are disabled. 
 This means **offline support is disabled**, but you can continue developing other functions in service worker.
 
-To be able to use caching and precaching, build and run the application in production mode using the following commands:
-
-```
-yarn build
-```
-
-```
-yarn start
-```
-
+To be able to use caching and precaching, build and run the application in production mode.
