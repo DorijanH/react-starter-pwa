@@ -65,12 +65,12 @@ Install project dependencies
 yarn install
 ```
 
-Launching the application in development mode
+Launch the application in development mode
 ```
 yarn dev
 ```
 
-Building and starting the production version
+Build and start the production version
 ```
 yarn build
 yarn start
