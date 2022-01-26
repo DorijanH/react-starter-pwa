@@ -1,5 +1,5 @@
-<h1 style="text-align: center">
-    <div style="margin-bottom: 10px">React PWA starter</div>
+<h1 align="center">
+    React PWA starter
     <div>
         <a href="https://reactjs.org/" target="blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="30" />
@@ -25,14 +25,14 @@
         <a href="https://yarnpkg.com/" target="blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" alt="yarn" width="30" />
         </a>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Plus_symbol.svg" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);"  height="30" />
+        +
         <a href="https://web.dev/progressive-web-apps/" target="blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/1920px-Progressive_Web_Apps_Logo.svg.png" alt="pwa" height="29">
         </a>
     </div>
 </h1>
 
-<div style="text-align: center">
+<div align="center">
 
 ![](https://img.shields.io/badge/%3C%2F%3E-JavaScript-informational)
 [![Build](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml/badge.svg?branch=main)](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml) 
@@ -44,7 +44,7 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/DorijanH/react-starter-pwa.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DorijanH/react-starter-pwa/alerts/)
 
 
-This project is the combination of [Enterwell React starter](https://github.com/Enterwell/react-starter) with the [next-pwa](https://www.npmjs.com/package/next-pwa#configuration) plugin installed.
+This project is the combination of [Enterwell React starter](https://github.com/Enterwell/react-starter) with the [next-pwa](https://www.npmjs.com/package/next-pwa#configuration) plugin.
 
 It serves as a starter to get the [Next.js](https://nextjs.org/) based PWA quickly running, while leveraging the nice-to-have architecture and structure behind the scenes.
 
