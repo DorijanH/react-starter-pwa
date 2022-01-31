@@ -1,32 +1,31 @@
 <h1 align="center">
-    React PWA starter
+    <p>React PWA starter</p>
     <div>
-        <a href="https://reactjs.org/" target="blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="30" />
-        </a>
-        <a href="https://www.javascript.com/" target="blank">
+        <a href="https://www.javascript.com/" target="_blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="30" />
         </a>
-        <a href="https://nextjs.org/" target="blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);" alt="nextjs" width="30" />
+        <a href="https://reactjs.org/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="30" />
         </a>
-        <a href="https://mobx.js.org/README.html" target="blank">
+        <a href="https://nextjs.org/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" alt="nextjs" width="30" />
+        </a>
+        <a href="https://mobx.js.org/README.html" target="_blank">
             <img src="https://mobx.js.org/assets/mobx.png" alt="mobx" width="30" />
         </a>
-        <a href="https://mui.com/" target="blank">
+        <a href="https://mui.com/" target="_blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="mui" width="30" />
         </a>
-        <a href="https://storybook.js.org/" target="blank">
+        <a href="https://sass-lang.com/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass" width="30" />
+        </a>
+        <a href="https://storybook.js.org/" target="_blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" alt="storybook" width="30" />
         </a>
-        <a href="https://www.cypress.io/" target="blank">
+        <a href="https://www.cypress.io/" target="_blank">
             <img src="https://www.cypress.io/icons/icon-48x48.png" alt="cypress" width="30" />
         </a>
-        <a href="https://yarnpkg.com/" target="blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" alt="yarn" width="30" />
-        </a>
-        +
-        <a href="https://web.dev/progressive-web-apps/" target="blank">
+        <a href="https://web.dev/progressive-web-apps/" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/1920px-Progressive_Web_Apps_Logo.svg.png" alt="pwa" height="29">
         </a>
     </div>
@@ -56,24 +55,24 @@ For all the information about structure, architecture, naming and reasoning behi
 
 Clone the application and move to the appropriate directory
 ```
-git clone https://github.com/DorijanH/react-starter-pwa.git <your-project-name>
-cd <your-project-name>
+$ git clone https://github.com/DorijanH/react-starter-pwa.git <your-project-name>
+$ cd <your-project-name>
 ```
 
 Install project dependencies
 ```
-yarn install
+$ yarn install
 ```
 
 Launch the application in development mode
 ```
-yarn dev
+$ yarn dev
 ```
 
 Build and start the production version
 ```
-yarn build
-yarn start
+$ yarn build
+$ yarn start
 ```
 
 Whether running in development or production mode, application is available at `http://localhost:3000`
