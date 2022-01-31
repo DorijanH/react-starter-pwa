@@ -11,7 +11,7 @@ const theme = (isDarkMode) => createTheme({
   palette: {
     mode: isDarkMode ? 'dark' : 'light',
     primary: {
-      main: '#ff0000',
+      main: '#2aa876',
       contrastText: '#ffffff'
     },
     secondary: {
