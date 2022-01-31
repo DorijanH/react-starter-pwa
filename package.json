@@ -25,8 +25,8 @@
     "component-test-open": "cypress open-ct",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "storycap-approve": "rimraf ./.storycap-approved && storycap --serverCmd \"start-storybook -p 6006\" --serverTimeout 180000 -o .storycap-approved http://localhost:6006",
-    "storycap": "rimraf ./.storycap-pending && storycap --serverCmd \"start-storybook -p 6006\" --serverTimeout 180000 -o .storycap-pending http://localhost:6006 && node ./config/storycapCompare"
+    "storycap-approve": "rimraf ./.storycap-approved && storycap --serverCmd \"start-storybook --no-open -p 6006\" --serverTimeout 180000 -o .storycap-approved http://localhost:6006",
+    "storycap": "rimraf ./.storycap-pending && storycap --serverCmd \"start-storybook --no-open -p 6006\" --serverTimeout 180000 -o .storycap-pending http://localhost:6006 && node ./helpers/StorycapCompare"
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
