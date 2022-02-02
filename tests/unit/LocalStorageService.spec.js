@@ -2,7 +2,7 @@
 import LocalStorageService from '../../services/LocalStorageService';
 
 /**
- * Class representing the Local Storage mock to use in Jest tests.
+ * Class representing the Local Storage mock.
  */
 class LocalStorageMock {
   constructor() {
