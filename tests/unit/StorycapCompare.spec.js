@@ -50,8 +50,8 @@ describe('Storycap compare unit tests', () => {
   });
 
   /**
-   * Testing that the helper does nothing if approved and pending files are the same.
    * Newly captured stories are the same as already approved ones.
+   * Testing that the helper does nothing if approved and pending files are the same.
    */
   it('Should do nothing if approved and pending files are the same', () => {
     // Arrange
@@ -90,9 +90,9 @@ describe('Storycap compare unit tests', () => {
   });
 
   /**
+   * There are fewer newly captured stories.
    * Testing that the helper deletes the extra approved files if they do not exist among
    * the pending files.
-   * There are fewer newly captured stories.
    */
   it('Should delete extra approved files', () => {
     // Arrange
@@ -135,9 +135,9 @@ describe('Storycap compare unit tests', () => {
   });
 
   /**
+   * There are more newly captured stories than approved stories.
    * Testing that the helper approves the extra pending files if they do not exist among
    * the approved files.
-   * There are more newly captured stories than approved stories.
    */
   it('Should approve extra pending files', () => {
     // Arrange
@@ -180,9 +180,9 @@ describe('Storycap compare unit tests', () => {
   });
 
   /**
+   * Not all newly captured stories are the same as already approved ones.
    * Testing that the helper overwrites the approved files with their pending counterparts
    * if they are not the same.
-   * Not all newly captured stories are the same as already approved ones.
    */
   it('Should overwrite different content', () => {
     // Arrange
