@@ -2,9 +2,6 @@
 const path = require('path');
 const { withPlugins } = require('next-compose-plugins');
 
-const withEnv = require('@moxy/next-env')({
-  removePrefixes: true
-});
 const withReactSvg = require('next-react-svg');
 const withSourceMaps = require('@zeit/next-source-maps');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -18,16 +15,11 @@ const withProdOnlyPlugin = (plugin) => (process.env.NODE_ENV === 'production'
 const withPWA = require('next-pwa');
 
 module.exports = withPlugins([
-  withEnv,
   withProdOnlyPlugin(withSourceMaps),
   withProdOnlyPlugin(withBundleAnalyzer),
   withReactSvg,
   withPWA
 ], {
-  env: {
-    LOCAL_SERVER: false,
-    ENV: process.env.NODE_ENV
-  },
   images: {
     domains: ['assets.pokemon.com'],
     loader: 'imgix',
