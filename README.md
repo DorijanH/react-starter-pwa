@@ -8,7 +8,7 @@
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="30" />
         </a>
         <a href="https://nextjs.org/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" alt="nextjs" width="30" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="nextjs" width="30" />
         </a>
         <a href="https://mobx.js.org/README.html" target="_blank">
             <img src="https://mobx.js.org/assets/mobx.png" alt="mobx" width="30" />
@@ -21,6 +21,9 @@
         </a>
         <a href="https://storybook.js.org/" target="_blank">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" alt="storybook" width="30" />
+        </a>
+        <a href="https://jestjs.io/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="jest" width="30" />
         </a>
         <a href="https://www.cypress.io/" target="_blank">
             <img src="https://www.cypress.io/icons/icon-48x48.png" alt="cypress" width="30" />
