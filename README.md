@@ -59,27 +59,29 @@ This project uses [Yarn](https://classic.yarnpkg.com/en/) as its package manager
 
 If you don't already have it, you can easily install it by using the following command (assuming you have [Node.js](https://nodejs.org/en/) installed)
 
-```
-$ npm install --global yarn
+```bash
+npm install --global yarn
 ```
 
 Now you can setup the application without any hassle use the following command
 
-```
-$ yarn create next-app -e https://github.com/DorijanH/react-starter-pwa
+```bash
+yarn create next-app -e https://github.com/DorijanH/react-starter-pwa
 ```
 
 And success, you are ready to rumble!
 
 Launching the application in development mode
-```
-$ yarn dev
+
+```bash
+yarn dev
 ```
 
 Building and starting the production version
-```
-$ yarn build
-$ yarn start
+
+```bash
+yarn build
+yarn start
 ```
 
 Whether running in development or production mode, application is available at `http://localhost:3000`
