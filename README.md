@@ -37,8 +37,7 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/%3C%2F%3E-JavaScript-informational)
-[![Build](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml/badge.svg?branch=main)](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml) 
-![GitHub repo size](https://img.shields.io/github/repo-size/dorijanh/react-starter-pwa?label=GitHub%20repo%20size&logo=github)
+[![Build](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml/badge.svg?branch=main)](https://github.com/DorijanH/react-starter-pwa/actions/workflows/BuildAndTest.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dorijanh/react-starter-pwa?label=Last%20commit)
 [![GitHub issues](https://img.shields.io/github/issues/dorijanh/react-starter-pwa?color=0088ff)](https://github.com/DorijanH/react-starter-pwa/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/dorijanh/react-starter-pwa?color=0088ff)](https://github.com/DorijanH/react-starter-pwa/pulls)
@@ -54,28 +53,35 @@ For all the information about structure, architecture, naming and reasoning behi
 
 </div>
 
-## Getting Started
+## Getting started
 
-Clone the application and move to the appropriate directory
-```
-$ git clone https://github.com/DorijanH/react-starter-pwa.git <your-project-name>
-$ cd <your-project-name>
-```
+This project uses [Yarn](https://classic.yarnpkg.com/en/) as its package manager so in order to get quickly up and running you will need to have it installed on your machine.
 
-Install project dependencies
-```
-$ yarn install
+If you don't already have it, you can easily install it by using the following command (assuming you have [Node.js](https://nodejs.org/en/) installed)
+
+```bash
+npm install --global yarn
 ```
 
-Launch the application in development mode
-```
-$ yarn dev
+Now you can setup the application without any hassle use the following command
+
+```bash
+yarn create next-app -e https://github.com/DorijanH/react-starter-pwa
 ```
 
-Build and start the production version
+And success, you are ready to rumble!
+
+Launching the application in development mode
+
+```bash
+yarn dev
 ```
-$ yarn build
-$ yarn start
+
+Building and starting the production version
+
+```bash
+yarn build
+yarn start
 ```
 
 Whether running in development or production mode, application is available at `http://localhost:3000`
