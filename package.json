@@ -25,8 +25,8 @@
     "component-test-open": "cypress open-ct",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "storycap-approve": "rimraf ./.storycap-approved && storycap --serverCmd \"start-storybook --no-open -p 6006\" --serverTimeout 180000 -o .storycap-approved http://localhost:6006",
-    "storycap": "rimraf ./.storycap-pending && storycap --serverCmd \"start-storybook --no-open -p 6006\" --serverTimeout 180000 -o .storycap-pending http://localhost:6006 && node -e require('./helpers/StorycapCompare').run()"
+    "stories-approve": "rimraf ./.stories-approved && storycap --serverCmd \"start-storybook --no-open -p 6007\" --serverTimeout 180000 -o .stories-approved http://localhost:6007",
+    "stories-check": "rimraf ./.stories-pending && storycap --serverCmd \"start-storybook --no-open -p 6007\" --serverTimeout 180000 -o .stories-pending http://localhost:6007 && node -e require('./helpers/StoriesCompare').run()"
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
@@ -66,6 +66,7 @@
     "@types/express": "^4.17.13",
     "@zeit/next-source-maps": "^0.0.3",
     "babel-loader": "^8.2.3",
+    "chalk": "4.1.2",
     "cross-env": "^7.0.2",
     "cypress": "^9.3.1",
     "eslint": "^8.8.0",
