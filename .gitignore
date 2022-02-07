@@ -24,7 +24,7 @@
 /storybook-static
 
 # storycap
-/.storycap-pending
+/.stories-pending
 
 # production
 /build
