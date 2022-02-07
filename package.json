@@ -25,8 +25,8 @@
     "component-test-open": "cypress open-ct",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "stories-approve": "rimraf ./.stories-approved && storycap --serverCmd \"start-storybook --no-open -p 6007\" --serverTimeout 180000 -o .stories-approved http://localhost:6007 && kill-port 6007",
-    "stories-check": "rimraf ./.stories-pending && storycap --serverCmd \"start-storybook --no-open -p 6007\" --serverTimeout 180000 -o .stories-pending http://localhost:6007 && kill-port 6007 && node -e \"require('./helpers/StoriesCompare').run()\""
+    "stories-approve": "rimraf ./.stories-approved && storycap --serverCmd \"start-storybook --ci -p 6007\" --serverTimeout 180000 -o .stories-approved http://localhost:6007 && kill-port 6007",
+    "stories-check": "rimraf ./.stories-pending && storycap --serverCmd \"start-storybook --ci -p 6007\" --serverTimeout 180000 -o .stories-pending http://localhost:6007 && kill-port 6007 && node -e \"require('./helpers/StoriesCompare').run()\""
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
