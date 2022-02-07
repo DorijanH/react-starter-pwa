@@ -13,6 +13,7 @@ on:
 
 jobs:
   build-lint-and-test:
+    name: Build, lint and test
 
     runs-on: ubuntu-latest
 
