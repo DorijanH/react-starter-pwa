@@ -30,7 +30,7 @@ jobs:
 
       - name: Create PR with changes
         id: prwc
-        if: ${{ steps.storiesCheck.outcome == 'success' }}
+        if: ${{ steps.storiesCheck.outcome == 'failure' }}
         uses: peter-evans/create-pull-request@v3
         with:
           add-paths: '.stories-approved/*'
