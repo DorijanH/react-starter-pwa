@@ -7,7 +7,7 @@ on:
 
 jobs:
   checkStories:
-    name: Check stories
+    name: Stories check
 
     runs-on: windows-latest
 
@@ -22,7 +22,7 @@ jobs:
           cache: 'yarn'
 
       - name: Yarn install
-        run: yarn install
+        run: yarn install --network-timeout 1000000
 
       - name: Run stories-check
         id: storiesCheck
