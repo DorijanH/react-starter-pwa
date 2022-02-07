@@ -35,6 +35,7 @@ jobs:
         with:
           add-paths: '.stories-approved/*'
           commit-message: '[stories-check] Automated story changes'
+          base: ${{ github.head_ref }}
           branch: 'ci/stories-check'
           delete-branch: true
           branch-suffix: short-commit-hash
