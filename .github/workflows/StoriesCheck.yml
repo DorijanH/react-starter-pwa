@@ -30,7 +30,7 @@ jobs:
 
       - name: Create PR with changes
         id: prwc
-        if: ${{ steps.storiesCheck.outcome == 'failure' }}
+        if: ${{ steps.storiesCheck.outcome == 'success' }}
         uses: peter-evans/create-pull-request@v3
         with:
           add-paths: '.stories-approved/*'
@@ -41,7 +41,7 @@ jobs:
           title: '[stories-check] Automated story changes'
       
       - name: Workflow outputs
-        if: ${{ prwc.outcome == 'success' }}
+        if: ${{ steps.prwc.outcome == 'success' }}
         run: |
           echo 'Pull Request Number - ${{ steps.prwc.outputs.pull-request-number }}'
           echo 'Pull Request URL - ${{ steps.prwc.outputs.pull-request-url }}'
