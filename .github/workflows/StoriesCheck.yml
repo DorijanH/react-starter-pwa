@@ -9,7 +9,7 @@ jobs:
   checkStories:
     name: Stories check
 
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
       - name: Checkout
@@ -19,16 +19,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
-          cache: 'yarn'
 
       - name: Yarn install
         run: yarn install --network-timeout 1000000
-        shell: bash
 
       - name: Run stories-check
         id: storiesCheck
         run: yarn stories-check
-        shell: bash
 
       - name: Create PR with changes
         id: prwc
