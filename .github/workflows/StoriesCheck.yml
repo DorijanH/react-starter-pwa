@@ -1,0 +1,48 @@
+name: Stories check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  checkStories:
+    name: Stories check
+
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+
+      - name: Yarn install
+        run: yarn install --network-timeout 1000000
+
+      - name: Run stories-check
+        id: storiesCheck
+        run: yarn stories-check
+
+      - name: Create PR with changes
+        id: prwc
+        if: failure() && steps.storiesCheck.outcome == 'failure'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          add-paths: '.stories-approved/*'
+          commit-message: '[stories-check] Automated story changes'
+          base: ${{ github.head_ref }}
+          branch: 'ci/stories-check'
+          delete-branch: true
+          branch-suffix: short-commit-hash
+          title: '[stories-check] Automated story changes'
+      
+      - name: Workflow outputs
+        if: failure() && steps.storiesCheck.outcome == 'failure'
+        run: |
+          echo 'Pull Request Number - ${{ steps.prwc.outputs.pull-request-number }}'
+          echo 'Pull Request URL - ${{ steps.prwc.outputs.pull-request-url }}'
