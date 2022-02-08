@@ -25,7 +25,7 @@ jobs:
         run: yarn install --network-timeout 1000000
 
       - name: Install Roboto font
-        run: sudo apt install fonts-roboto
+        run: sudo apt-get install fonts-roboto-fontface
 
       - name: Run stories-check
         id: storiesCheck
