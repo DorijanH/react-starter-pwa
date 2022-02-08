@@ -9,7 +9,7 @@ jobs:
   checkStories:
     name: Stories check
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
       - name: Checkout
@@ -23,9 +23,6 @@ jobs:
 
       - name: Yarn install
         run: yarn install --network-timeout 1000000
-
-      - name: Install Roboto font
-        run: sudo apt-get install fonts-roboto-fontface
 
       - name: Run stories-check
         id: storiesCheck
