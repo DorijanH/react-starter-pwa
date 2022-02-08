@@ -23,10 +23,12 @@ jobs:
 
       - name: Yarn install
         run: yarn install --network-timeout 1000000
+        shell: bash
 
       - name: Run stories-check
         id: storiesCheck
         run: yarn stories-check
+        shell: bash
 
       - name: Create PR with changes
         id: prwc
