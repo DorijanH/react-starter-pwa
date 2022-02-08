@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+          cache: 'yarn'
 
       - name: Yarn install
         run: yarn install --network-timeout 1000000
@@ -27,21 +28,15 @@ jobs:
         id: storiesCheck
         run: yarn stories-check
 
-      - name: Create PR with changes
-        id: prwc
+      - name: Commit story changes
+        id: csc
         if: failure() && steps.storiesCheck.outcome == 'failure'
-        uses: peter-evans/create-pull-request@v3
+        uses: EndBug/add-and-commit@v8
         with:
-          add-paths: '.stories-approved/*'
-          commit-message: '[stories-check] Automated story changes'
-          base: ${{ github.head_ref }}
-          branch: 'ci/stories-check'
-          delete-branch: true
-          branch-suffix: short-commit-hash
-          title: '[stories-check] Automated story changes'
+          add: '.stories-approved'
+          default_author: github_actions
+          message: '[skip ci] [stories-check] Automated story changes'
       
       - name: Workflow outputs
         if: failure() && steps.storiesCheck.outcome == 'failure'
-        run: |
-          echo 'Pull Request Number - ${{ steps.prwc.outputs.pull-request-number }}'
-          echo 'Pull Request URL - ${{ steps.prwc.outputs.pull-request-url }}'
+        run: echo 'Commit short SHA - ${{ steps.csc.outputs.commit_sha }}'
