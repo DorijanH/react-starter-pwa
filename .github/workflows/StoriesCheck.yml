@@ -36,6 +36,7 @@ jobs:
           add: '.stories-approved'
           default_author: github_actions
           message: '[skip ci] [stories-check] Automated story changes'
+          new_branch: ${{ github.head_ref }}
       
       - name: Workflow outputs
         if: failure() && steps.storiesCheck.outcome == 'failure'
