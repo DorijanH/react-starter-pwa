@@ -9,7 +9,7 @@ jobs:
   checkStories:
     name: Stories check
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout
@@ -42,7 +42,7 @@ jobs:
           title: '[stories-check] Automated story changes'
       
       - name: Workflow outputs
-        if: steps.prwc.outcome == 'success'
+        if: failure() && steps.storiesCheck.outcome == 'failure'
         run: |
           echo 'Pull Request Number - ${{ steps.prwc.outputs.pull-request-number }}'
           echo 'Pull Request URL - ${{ steps.prwc.outputs.pull-request-url }}'
