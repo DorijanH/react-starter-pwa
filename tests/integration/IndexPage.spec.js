@@ -3,7 +3,7 @@
  */
 describe('Index page', () => {
   afterEach(() => {
-    cy.wait(2000);
+    cy.wait(3000);
     cy.screenshot();
   });
 

@@ -1,5 +1,5 @@
 /**
- * API requests fixtures,
+ * API requests fixtures
  */
 beforeEach(() => {
   cy.intercept('GET', '**/pokemon/1', { fixture: 'pokemonId1' });
@@ -11,7 +11,7 @@ beforeEach(() => {
  */
 describe('Pokemon details page', () => {
   afterEach(() => {
-    cy.wait(2000);
+    cy.wait(3000);
     cy.screenshot();
   });
 
@@ -53,6 +53,10 @@ describe('Pokemon details page', () => {
 
     cy.get('input')
       .should('have.value', '');
+
+    // Unfocus so the input caret is removed (needed for consistent screenshots)
+    cy.get('input')
+      .blur();
 
     cy.get('[class*="UserInformation_name"]')
       .contains('Matej');
