@@ -12,6 +12,14 @@ beforeEach(() => {
  */
 describe('Pokemons page', () => {
   /**
+   * Runs after each individual test.
+   */
+  afterEach(() => {
+    cy.wait(3000);
+    cy.screenshot();
+  });
+
+  /**
    * Testing that the page has list of 10 pokemons and that the first one is correct.
    */
   it('shows the Pokemons data', () => {

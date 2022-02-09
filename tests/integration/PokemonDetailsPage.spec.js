@@ -1,5 +1,5 @@
 /**
- * API requests fixtures,
+ * API requests fixtures.
  */
 beforeEach(() => {
   cy.intercept('GET', '**/pokemon/1', { fixture: 'pokemonId1' });
@@ -10,6 +10,14 @@ beforeEach(() => {
  * Pokemon details page integration tests.
  */
 describe('Pokemon details page', () => {
+  /**
+   * Runs after each individual test.
+   */
+  afterEach(() => {
+    cy.wait(3000);
+    cy.screenshot();
+  });
+
   /**
    * Testing that the page shows pokemon's details data.
    */
@@ -48,6 +56,10 @@ describe('Pokemon details page', () => {
 
     cy.get('input')
       .should('have.value', '');
+
+    // Unfocus so the input caret is removed (needed for consistent screenshots)
+    cy.get('input')
+      .blur();
 
     cy.get('[class*="UserInformation_name"]')
       .contains('Matej');

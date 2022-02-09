@@ -3,6 +3,14 @@
  */
 describe('404 page', () => {
   /**
+   * Runs after each individual test.
+   */
+  afterEach(() => {
+    cy.wait(3000);
+    cy.screenshot();
+  });
+
+  /**
    * Testing that the 404 page is shown when accessing route that does not exist.
    */
   it('shows when bad is entered', () => {
