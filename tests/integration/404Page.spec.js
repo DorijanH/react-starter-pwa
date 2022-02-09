@@ -2,6 +2,8 @@
  * 404 page integration tests.
  */
 describe('404 page', () => {
+  afterEach(() => cy.screenshot());
+
   /**
    * Testing that the 404 page is shown when accessing route that does not exist.
    */

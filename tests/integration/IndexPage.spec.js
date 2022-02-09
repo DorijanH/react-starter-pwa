@@ -2,6 +2,8 @@
  * Index page integration tests.
  */
 describe('Index page', () => {
+  afterEach(() => cy.screenshot());
+
   /**
    * Testing that the index page has link to page with pokemons.
    */

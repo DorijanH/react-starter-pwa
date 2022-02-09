@@ -1,6 +1,7 @@
 {
   "baseUrl": "http://localhost:3000",
   "integrationFolder": "tests/integration",
+  "screenshotsFolder": ".cypress-approved",
   "component": {
     "componentFolder": "tests/component",
     "testFiles": "*.@(spec|test).@(js|jsx|ts|tsx)"
