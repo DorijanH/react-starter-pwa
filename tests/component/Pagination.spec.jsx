@@ -8,6 +8,8 @@ import Pagination from '../../components/Pagination/Pagination';
  * Pagination component tests.
  */
 describe('Pagination', () => {
+  afterEach(() => cy.screenshot());
+
   /**
    * Testing that the component correctly renders without passing any props.
    */

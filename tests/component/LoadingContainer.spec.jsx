@@ -8,6 +8,8 @@ import LoadingContainer from '../../components/LoadingContainer/LoadingContainer
  * Loading container component tests.
  */
 describe('Loading container', () => {
+  afterEach(() => cy.screenshot());
+
   /**
    * Testing that the loading indicator is not shown when using the component
    * without passing any props.

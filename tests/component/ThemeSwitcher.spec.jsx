@@ -8,6 +8,8 @@ import ThemeSwitcher from '../../components/ThemeSwitcher/ThemeSwitcher';
  * Theme switcher component tests.
  */
 describe('Theme switcher', () => {
+  afterEach(() => cy.screenshot());
+
   /**
    * Testing that the component correctly renders without passing any props.
    */

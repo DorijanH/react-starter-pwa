@@ -1,4 +1,4 @@
-name: Stories check
+name: Screenshots check
 
 on:
   pull_request:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  checkStories:
-    name: Stories check
+  checkScreenshots:
+    name: Screenshots check
 
     runs-on: windows-latest
 
@@ -38,6 +38,24 @@ jobs:
           new_branch: ${{ github.head_ref }}
           default_author: github_actions
       
-      - name: Workflow outputs
+      - name: Commit story changes outputs
         if: failure() && steps.storiesCheck.outcome == 'failure'
         run: echo 'Commit short SHA - ${{ steps.csc.outputs.commit_sha }}'
+
+      - name: Run cypress-check
+        id: cypressCheck
+        run: yarn cypress-check
+
+      - name: Commit cypress changes
+        id: ccc
+        if: failure() && steps.cypressCheck.outcome == 'failure'
+        uses: EndBug/add-and-commit@v8
+        with:
+          add: '.cypress-approved'
+          message: '[skip ci] [cypress-check] Automated cypress changes'
+          new_branch: ${{ github.head_ref }}
+          default_author: github_actions
+      
+      - name: Commit cypress changes outputs
+        if: failure() && steps.cypressCheck.outcome == 'failure'
+        run: echo 'Commit short SHA - ${{ steps.ccc.outputs.commit_sha }}'
