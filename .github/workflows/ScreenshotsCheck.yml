@@ -44,6 +44,7 @@ jobs:
 
       - name: Run cypress-check
         id: cypressCheck
+        if: always()
         run: yarn cypress-check
 
       - name: Commit cypress changes
