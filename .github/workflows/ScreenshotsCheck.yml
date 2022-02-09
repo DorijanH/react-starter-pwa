@@ -33,7 +33,7 @@ jobs:
         if: failure() && steps.storiesCheck.outcome == 'failure'
         uses: EndBug/add-and-commit@v8
         with:
-          add: '.stories-approved'
+          add: '--force .stories-approved'
           message: '[skip ci] [stories-check] Automated story changes'
           new_branch: ${{ github.head_ref }}
           default_author: github_actions
@@ -52,7 +52,7 @@ jobs:
         if: failure() && steps.cypressCheck.outcome == 'failure'
         uses: EndBug/add-and-commit@v8
         with:
-          add: '.cypress-approved'
+          add: '--force .cypress-approved'
           message: '[skip ci] [cypress-check] Automated cypress changes'
           new_branch: ${{ github.head_ref }}
           default_author: github_actions
