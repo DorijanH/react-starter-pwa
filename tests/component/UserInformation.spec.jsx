@@ -13,7 +13,10 @@ beforeEach(() => {
  * User information component tests.
  */
 describe('User information', () => {
-  afterEach(() => cy.screenshot());
+  afterEach(() => {
+    cy.wait(2000);
+    cy.screenshot();
+  });
 
   /**
    * Testing that the component correctly renders without passing any props.

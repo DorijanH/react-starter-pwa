@@ -12,7 +12,7 @@ beforeEach(() => {
  */
 describe('Pokemons page', () => {
   afterEach(() => {
-    cy.wait(700);
+    cy.wait(2000);
     cy.screenshot();
   });
 
