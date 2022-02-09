@@ -13,7 +13,7 @@ function NotFoundView() {
         404
       </h1>
       <h2 className={styles.subtitle}>
-        Just like Pokemons, this page doesn't exists
+        Just like Pokemons, this page doesn't exist
       </h2>
     </div>
   );

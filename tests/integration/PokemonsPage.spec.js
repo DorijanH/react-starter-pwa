@@ -11,7 +11,10 @@ beforeEach(() => {
  * Pokemons page integration tests.
  */
 describe('Pokemons page', () => {
-  afterEach(() => cy.screenshot());
+  afterEach(() => {
+    cy.wait(700);
+    cy.screenshot();
+  });
 
   /**
    * Testing that the page has list of 10 pokemons and that the first one is correct.

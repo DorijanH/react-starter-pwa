@@ -10,7 +10,10 @@ beforeEach(() => {
  * Pokemon details page integration tests.
  */
 describe('Pokemon details page', () => {
-  afterEach(() => cy.screenshot());
+  afterEach(() => {
+    cy.wait(700);
+    cy.screenshot();
+  });
 
   /**
    * Testing that the page shows pokemon's details data.

@@ -24,11 +24,9 @@
 /storybook-static
 
 # storycap
-/.stories-approved
 /.stories-pending
 
 # cypress screenshots
-/.cypress-approved
 /.cypress-pending
 
 # production
