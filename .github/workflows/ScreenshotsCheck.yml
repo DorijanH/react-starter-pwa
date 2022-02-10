@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{github.event.pull_request.head.ref}}
 
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
