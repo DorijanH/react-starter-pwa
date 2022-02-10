@@ -26,29 +26,30 @@ jobs:
 
       - name: Run stories-check
         id: storiesCheck
+        continue-on-error: true
         run: yarn stories-check
 
       - name: Commit story changes
         id: csc
-        if: failure() && steps.storiesCheck.outcome == 'failure'
+        if: steps.storiesCheck.outcome == 'failure'
         uses: EndBug/add-and-commit@v8
         with:
           add: '.stories-approved'
-          message: '[stories-check] Automated story changes'
+          message: '[skip ci] [stories-check] Automated story changes'
           new_branch: ${{ github.head_ref }}
           default_author: github_actions
 
       - name: Run cypress-check
         id: cypressCheck
-        if: always()
+        continue-on-error: true
         run: yarn cypress-check
 
       - name: Commit cypress changes
         id: ccc
-        if: failure() && steps.cypressCheck.outcome == 'failure'
+        if: steps.cypressCheck.outcome == 'failure'
         uses: EndBug/add-and-commit@v8
         with:
           add: '.cypress-approved'
-          message: '[cypress-check] Automated cypress changes'
+          message: '[skip ci] [cypress-check] Automated cypress changes'
           new_branch: ${{ github.head_ref }}
           default_author: github_actions
