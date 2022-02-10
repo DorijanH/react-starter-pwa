@@ -50,7 +50,7 @@ function UserInformation(props) {
         !
       </div>
       <div className={styles.newNameWrapper}>
-        That's not really my name. You should rather call mee
+        That's not really my name. You should rather call me
         <TextField
           label="Name"
           variant="standard"
