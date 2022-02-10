@@ -27,7 +27,7 @@
 /**
  * Cypress 'screenshot' method overwrite.
  *
- * @param {Function} originalFn Origin function that is begin overwritten.
+ * @param {Function} originalFn Original 'screenshot' function that is begin overwritten.
  * @param {string} fileName A name for the image file.
  * @param {Object} options Options object to change the default behavior of the function.
  */
@@ -42,6 +42,6 @@ Cypress.Commands.overwrite('screenshot', (originalFn, fileName, options) => {
   // Wait a little for all assets to be properly rendered
   cy.wait(200);
 
-  // Call the original screenshot function
+  // Call the original 'screenshot' function
   originalFn(fileName, options);
 });
