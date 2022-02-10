@@ -44,4 +44,7 @@ Cypress.Commands.overwrite('screenshot', (originalFn, fileName, options) => {
 
   // Call the original 'screenshot' function
   originalFn(fileName, options);
+
+  // 'Screenshot' is an asynchronous command and takes around 100ms to complete
+  cy.wait(200);
 });
