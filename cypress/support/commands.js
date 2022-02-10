@@ -44,4 +44,6 @@ Cypress.Commands.overwrite('screenshot', (originalFn, fileName, options) => {
 
   // Call the original 'screenshot' function
   originalFn(fileName, options);
+
+  cy.wait(200);
 });
