@@ -26,6 +26,9 @@
 # storycap
 /.stories-pending
 
+# cypress screenshots
+/.cypress-pending
+
 # production
 /build
 
