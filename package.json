@@ -31,7 +31,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.3.1",
+    "@mui/icons-material": "^5.5.0",
     "@mui/material": "^5.4.3",
     "@mui/styles": "^5.5.0",
     "axios": "^0.26.0",
